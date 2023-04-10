@@ -1,5 +1,9 @@
 <?php
 
+namespace Illegal\FluentBCMath;
+
+use Closure;
+
 final class BCNumber
 {
     private string $value;
@@ -15,12 +19,17 @@ final class BCNumber
     # Data conversion #
     ###################
 
+    public function val(): string
+    {
+        return $this->value;
+    }
+
     /**
      * Converts the number to a string
      */
     public function __toString(): string
     {
-        return $this->value;
+        return $this->val();
     }
 
     /**
@@ -64,9 +73,10 @@ final class BCNumber
         return new BCNumber(
             bcadd(
                 $this->value,
-                self::from($number, $this->scale)->value,
+                self::from($number, $this->scale)->val(),
                 $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -78,9 +88,10 @@ final class BCNumber
         return new BCNumber(
             bcsub(
                 $this->value,
-                self::from($number, $this->scale)->value,
+                self::from($number, $this->scale)->val(),
                 $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -92,9 +103,10 @@ final class BCNumber
         return new BCNumber(
             bcmul(
                 $this->value,
-                self::from($number, $this->scale)->value,
+                self::from($number, $this->scale)->val(),
                 $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -106,9 +118,10 @@ final class BCNumber
         return new BCNumber(
             bcdiv(
                 $this->value,
-                self::from($number, $this->scale)->value,
+                self::from($number, $this->scale)->val(),
                 $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -120,9 +133,10 @@ final class BCNumber
         return new BCNumber(
             bcmod(
                 $this->value,
-                self::from($number, $this->scale)->value,
+                self::from($number, $this->scale)->val(),
                 $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -134,24 +148,10 @@ final class BCNumber
         return new BCNumber(
             bcpow(
                 $this->value,
-                self::from($number, $this->scale)->value,
+                self::from($number, 0)->val(),
                 $this->scale
-            )
-        );
-    }
-
-    /**
-     * Calculates the power of the current number by a number, reduced by a specified modulus
-     */
-    public function powmod(BCNumber|int|float $number, BCNumber|int|float $modulus): BCNumber
-    {
-        return new BCNumber(
-            bcpowmod(
-                $this->value,
-                self::from($number, $this->scale)->value,
-                self::from($modulus, $this->scale)->value,
-                $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -164,7 +164,8 @@ final class BCNumber
             bcsqrt(
                 $this->value,
                 $this->scale
-            )
+            ),
+            $this->scale
         );
     }
 
@@ -251,20 +252,6 @@ final class BCNumber
 
         if ($condition) {
             return $this->pow($number);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Calculates the power of the current number by a number, reduced by a specified modulus if the condition is true
-     */
-    public function powmodIf(BCNumber|int|float $number, BCNumber|int|float $modulus, Closure|bool $condition = true): BCNumber
-    {
-        $condition = $condition instanceof Closure ? $condition() : $condition;
-
-        if ($condition) {
-            return $this->powmod($number, $modulus);
         }
 
         return $this;
