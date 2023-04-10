@@ -35,15 +35,15 @@
   "autoload": {
     "psr-4": {
       "Illegal\\FluentBCMath\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Illegal\\FluentBCMath\\Tests\\": "tests/"
     },
     "files": [
       "functions/fluent-bcmath.php"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Illegal\\FluentBCMath\\Tests\\": "tests/"
+    }
   },
   "config": {
     "allow-plugins": {
