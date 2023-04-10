@@ -1,3 +1,7 @@
+# v1.0.1
+
+- Fixed a bug in the `fnum()` helper function.
+
 # v1.0
 
 First release of the project.
