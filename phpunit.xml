@@ -8,8 +8,8 @@
   <coverage/>
   <source>
     <include>
-      <directory suffix=".php">./functions</directory>
-      <directory suffix=".php">./src</directory>
+      <directory>./functions</directory>
+      <directory>./src</directory>
     </include>
   </source>
 </phpunit>
