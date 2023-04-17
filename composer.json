@@ -27,7 +27,7 @@
       "name": "Mircha Emanuel D'Angelo",
       "email": "mirchaemanuel@gmail.com",
       "role": "Developer"
-    },
+    }
   ],
   "minimum-stability": "stable",
   "require": {
