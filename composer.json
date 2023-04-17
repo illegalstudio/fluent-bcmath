@@ -22,11 +22,16 @@
       "name": "Vincenzo Petrucci",
       "email": "vincenzo.petrucci@gmail.com",
       "role": "Maintainer"
-    }
+    },
+    {
+      "name": "Mircha Emanuel D'Angelo",
+      "email": "mirchaemanuel@gmail.com",
+      "role": "Developer"
+    },
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=8.0",
+    "php": ">=8.1",
     "ext-bcmath": "*"
   },
   "require-dev": {
