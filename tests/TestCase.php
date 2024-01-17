@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Illegal\FluentBCMath\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
