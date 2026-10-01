@@ -1,8 +1,35 @@
-# fluent-bcmath
+<p align="center">
+  <img src="assets/logo-transparent.png" alt="Fluent BCMath logo" width="130">
+</p>
 
-Fluent BcMath is a fluent interface for the PHP BcMath extension.
+<h1 align="center">Fluent BCMath</h1>
 
-It helps you to write more readable code, while maintaining the performance of the BcMath extension.
+<p align="center">
+  <em>Precise arithmetic. Fluent code.</em>
+</p>
+
+<p align="center">
+  <a href="https://packagist.org/packages/illegal/fluent-bcmath"><img src="https://img.shields.io/packagist/v/illegal/fluent-bcmath?style=flat-square&amp;logo=composer&amp;logoColor=white&amp;color=007C98" alt="Latest stable version"></a>
+  <a href="https://packagist.org/packages/illegal/fluent-bcmath"><img src="https://img.shields.io/packagist/dt/illegal/fluent-bcmath?style=flat-square&amp;logo=composer&amp;logoColor=white&amp;color=007C98" alt="Total downloads"></a>
+  <a href="composer.json"><img src="https://img.shields.io/badge/PHP-%3E%3D8.1-007C98?style=flat-square&amp;logo=php&amp;logoColor=white&amp;color=007C98" alt="PHP 8.1 or newer"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/illegalstudio/fluent-bcmath?style=flat-square&amp;color=007C98" alt="License: MIT"></a>
+  <a href="https://github.com/illegalstudio/fluent-bcmath/stargazers"><img src="https://img.shields.io/github/stars/illegalstudio/fluent-bcmath?style=flat-square&amp;logo=github&amp;logoColor=white&amp;label=stars&amp;color=007C98" alt="GitHub stars"></a>
+</p>
+
+<p align="center">
+  <strong>Arbitrary precision &middot; Chainable operations &middot; Immutable numbers &middot; PHP 8.1+</strong>
+</p>
+
+<p align="center">
+  Fluent BCMath brings an expressive, fluent interface to PHP's BCMath extension.
+  Chain arithmetic operations and compare numbers while keeping control over decimal precision.
+</p>
+
+<p align="center">
+  <a href="https://fluent-bcmath.illegal.studio/"><strong>Official Website</strong></a>
+</p>
+
+---
 
 ## Installation
 
